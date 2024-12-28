@@ -1,24 +1,18 @@
+function randomNumber() {
+  const randomNum = Math.floor(Math.random() * 16777215);
+  // console.log(randomNum);
 
+  const randomCode = "#" + randomNum.toString(16);
 
-function randomNumber(){
+  // console.log(randomCode);
 
-    const randomNum = Math.floor(Math.random()* 16777215 );
-    // console.log(randomNum);
+  document.body.style.backgroundColor = randomCode;
 
-    const randomCode = "#" + randomNum.toString(16);
+  document.getElementById("hexcode").innerText = `Hexcode is :- ${randomCode}`;
 
-    // console.log(randomCode);
+  document.getElementById("generate").style.backgroundColor = randomCode;
 
-    document.body.style.backgroundColor = randomCode ;
-
-   document.getElementById("hexcode").innerText  = `Hexcode is :- ${randomCode}`;
-
-   document.getElementById("generate").style.backgroundColor = randomCode;
-
-
-   navigator.clipboard.writeText(randomCode)
-
+  navigator.clipboard.writeText(randomCode);
 }
 
-
-randomNumber()
+randomNumber();
